@@ -6,6 +6,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../../environments/environment';
+import { SecurityService } from './security/security.service';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { environment } from '../../environments/environment';
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule
   ],
-  exports: [BrowserModule, CommonModule]
+  exports: [BrowserModule, CommonModule],
+  providers: [SecurityService]
 })
 export class CoreModule {}

@@ -1,6 +1,4 @@
-{{ loggedInUser | json }}
-
-<ng-container *ngIf="loggedInUser !== null">
+<ng-container *ngIf="securityService.user | async">
   <nav>
     <a routerLink="features" routerLinkActive="active">Features</a>
     <a routerLink="roles" routerLinkActive="active">Roles</a>
@@ -9,7 +7,7 @@
   </nav>
 </ng-container>
 
-<ng-container *ngIf="loggedInUser === null">
+<ng-container *ngIf="!(securityService.user | async)">
   <nav>
     <a routerLink="login" routerLinkActive="active">Login</a>
     <a routerLink="register" routerLinkActive="active">Register</a>

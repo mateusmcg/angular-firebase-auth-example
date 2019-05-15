@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SecurityService } from 'src/app/core/security/security.service';
 import { Router } from '@angular/router';
-import { AuthStateService } from 'src/app/core/security/auth-state.service';
 
 @Component({
   selector: 'app-login',
@@ -11,17 +10,10 @@ import { AuthStateService } from 'src/app/core/security/auth-state.service';
 export class LoginComponent implements OnInit {
   constructor(
     private securityService: SecurityService,
-    private authState: AuthStateService,
     private router: Router
   ) {}
 
-  public ngOnInit(): void {
-    this.authState.userState.subscribe(user => {
-      if (user) {
-        this.router.navigate(['features']);
-      }
-    });
-  }
+  public ngOnInit(): void {}
 
   googleLogin() {
     this.securityService.doGoogleLogin().then(result => {
