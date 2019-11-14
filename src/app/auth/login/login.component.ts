@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  public flagProp = false;
+
   constructor(
     private securityService: SecurityService,
     private router: Router
@@ -20,5 +22,9 @@ export class LoginComponent implements OnInit {
       console.log('login component:', result);
       this.router.navigate(['features']);
     });
+  }
+
+  public flag(): void {
+    this.flagProp = !this.flagProp;
   }
 }

@@ -1,1 +1,9 @@
 <button class="googleBtn" (click)="googleLogin()"> Login with Google </button>
+
+<button (click)="flag()"> FLAG </button>
+
+<app-features *ngIf="flagProp"></app-features>
+
+<!-- <ng-container *ngIf="flagProp">
+  <app-features></app-features>
+</ng-container> -->

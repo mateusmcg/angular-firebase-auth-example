@@ -19,6 +19,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UsersComponent,
     DashboardComponent
   ],
-  imports: [CommonModule, AuthRoutingModule]
+  imports: [CommonModule, AuthRoutingModule],
+  exports: [DashboardComponent]
 })
 export class AuthModule {}

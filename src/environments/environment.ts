@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {}
+  firebaseConfig: {
+    apiKey: 'AIzaSyCCEWHkCnDYfk5nkbv8ZVy9PgqQGTSwYFQ',
+    authDomain: 'sorteador-times-bps.firebaseapp.com',
+    databaseURL: 'https://sorteador-times-bps.firebaseio.com',
+    projectId: 'sorteador-times-bps',
+    storageBucket: 'sorteador-times-bps.appspot.com',
+    messagingSenderId: '481323915707',
+    appId: '1:481323915707:web:0e2edb2aaf2490ed'
+  }
 };
 
 /*
